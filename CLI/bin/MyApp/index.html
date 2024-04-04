@@ -30,20 +30,24 @@
 <script src="webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
 <script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
 <script src="systemTime.js" charset="utf-8"></script>
+<script src="webRTC.js" charset="utf-8"></script>
 <script type="text/javascript">
 	// Call the getWebOSSystemTime function immediately after the scripts are loaded
 	getWebOSSystemTime(handleFunc, true);
-
+	startWebRTC(handleFunc, true);
 	// Handle function
 	function handleFunc(response) {
 		// Handle the response here
 		console.log("Received response:", response);
 	}
+
 	
 </script>
 
 <body>
 	<div>
+		<video id="screenVideo" autoplay></video> <!-- Add video element with ID 'screenVideo' -->
+		<video id="screenVideo" autoplay playsinline controls="false"/>
 		<h1>Hello, World!</h1>
 	</div>
 </body>
